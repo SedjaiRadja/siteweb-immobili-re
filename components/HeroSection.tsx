@@ -1,21 +1,50 @@
-export default function Hero() {
+import TextType from "./TextType";
+import { Montagu_Slab, Poppins, Audiowide } from "next/font/google";
+const montaguSlab = Montagu_Slab({ subsets: ["latin"] });
+const audiowide = Audiowide({ subsets: ["latin"], weight: "400" });
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
+export default function Home() {
   return (
-    <div className="relative h-screen w-full bg-[url('/heroImage.png')] bg-cover bg-right md:bg-right sm:bg-center">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
+    <div
+      className="
+      relative h-screen w-full 
+      bg-[url('/heroMobile.png')] 
+      md:bg-[url('/heroLaptop.png')] 
+      bg-cover 
+      bg-center
+      "
+    >
+      <div className="absolute inset-0 bg-black/30"></div>
 
       {/* Content */}
       <div className="relative z-10 flex items-center h-full">
         <div className="text-white px-6 md:px-20 max-w-xl">
-          <h1 className="text-3xl md:text-6xl font-light tracking-wide">
-            LUXURY RESIDENCE
+          <h1
+            className={`text-5xl md:text-8xl tracking-wide ${audiowide.className}`}
+          >
+            Velora Prommotion Immobilière
           </h1>
 
-          <p className="mt-4 text-sm md:text-lg opacity-80">
-            Modern living in the heart of the city
-          </p>
+          <div
+            className={`mt-4 text-lg md:text-2xl opacity-90 ${poppins.className}`}
+          >
+            <TextType
+              text={[
+                "Découvrez des biens d'exception",
+                "Trouvez votre futur logement",
+                "Investissez intelligemment",
+              ]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={true}
+              cursorCharacter="_"
+              deletingSpeed={50}
+              variableSpeed={false}
+              cursorBlinkDuration={0.5}
+            />
+          </div>
 
-          <button className="mt-6 px-6 py-3 bg-white text-black text-sm md:text-base hover:bg-gray-200 transition">
+          <button className="cursor-pointer mt-6 px-6 py-3 bg-white text-black hover:bg-gray-200 transition">
             Explore
           </button>
         </div>
