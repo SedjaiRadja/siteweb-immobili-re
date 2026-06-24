@@ -1,3 +1,4 @@
+import CountUpComponent from "@/components/CountUpComponent";
 import Hero from "@/components/HeroSection";
 import Navbar from "@/components/NavBar";
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Hero />
+      <CountUpComponent />
     </div>
   );
 }

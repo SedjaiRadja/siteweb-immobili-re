@@ -3,7 +3,11 @@
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
-
+.logos-loop img[alt="snapchat"] {
+  height: 70px !important;
+  width: 70px !important;
+  transform: scale(1.15);
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

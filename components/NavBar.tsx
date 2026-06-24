@@ -19,7 +19,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div
-          className={`hidden lg:flex items-center gap-8 text-white font-medium ${Merriweather.className}`}
+          className={`hidden md:text-xl lg:flex items-center gap-8 text-white font-medium ${Merriweather.className}`}
         >
           <Link href="/a-propos" className="transition hover:text-slate-300">
             À propos
