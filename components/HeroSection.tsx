@@ -2,18 +2,19 @@ import TextType from "./TextType";
 import { ArrowRight } from "lucide-react";
 import LogoLoop from "./LogoLoop";
 import { Poppins, Audiowide } from "next/font/google";
+import Link from "next/link";
 
-const audiowide = Audiowide({ subsets: ["latin"], weight: "400" });
-const poppins = Poppins({ subsets: ["latin"], weight: "400" });
+export const audiowide = Audiowide({ subsets: ["latin"], weight: "400" });
+export const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 const logosImages = [
   { src: "/facebook.png", alt: "facebook" },
   { src: "/instagram.png", alt: "instagram" },
   { src: "/linkedin.png", alt: "linkedin" },
-  { src: "/snapchat.png", alt: "snapchat" },
+  { src: "/tiktok.png", alt: "tiktok" },
 ];
 
-export default function Home() {
+export default function Hero() {
   return (
     <div className="relative h-screen w-full bg-[url('/heroMobile.png')] md:bg-[url('/heroLaptop.png')] bg-cover bg-center">
       {/* Overlay */}
@@ -46,21 +47,22 @@ export default function Home() {
               cursorBlinkDuration={0.5}
             />
           </div>
-
-          <button
-            className={`group cursor-pointer rounded-lg mt-6 px-6 py-3 bg-white text-black hover:bg-gray-200 transition flex items-center gap-2 ${audiowide.className}`}
-          >
-            Explore
-            <ArrowRight
-              size={20}
-              className="transition-transform duration-300 group-hover:translate-x-2"
-            />
-          </button>
+          <Link href="/#projets">
+            <button
+              className={`group cursor-pointer rounded-lg mt-6 px-6 py-3 bg-white text-black hover:bg-gray-200 transition flex items-center gap-2 ${audiowide.className}`}
+            >
+              Explore
+              <ArrowRight
+                size={20}
+                className="transition-transform duration-300 group-hover:translate-x-2"
+              />
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* LOGO LOOP SECTION */}
-      <div className="pt-3 relative overflow-hidden flex items-center justify-center bg-gray-200 logos-loop mt-0">
+      <div className="pt-3 relative overflow-hidden flex items-center justify-center bg-[#2A241F] logos-loop mt-0">
         <LogoLoop
           logos={logosImages}
           speed={100}
@@ -70,8 +72,8 @@ export default function Home() {
           hoverSpeed={0}
           scaleOnHover
           fadeOut
-          fadeOutColor="#ffffff"
-          ariaLabel="Technology partners"
+          fadeOutColor="#2A241F"
+          ariaLabel="logos"
         />
       </div>
     </div>

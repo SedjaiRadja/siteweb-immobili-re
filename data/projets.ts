@@ -1,0 +1,77 @@
+export const projets = [
+  {
+    slug: "residence-el-amir",
+    name: "Résidence El Amir",
+    location: "Belgaid, Oran",
+    images: ["/projets/residence1.png"],
+    description:
+      "Une résidence moderne offrant des appartements spacieux, des finitions haut de gamme et un environnement sécurisé.",
+    type: "F2, F3, F4",
+    surface: "95 m²",
+    price: "À partir de 12 500 000 DA",
+    delivery: "2027",
+    caracteristiques: [
+      "Parking souterrain",
+      "Sécurité 24h/24",
+      "Ascenseurs modernes",
+      "Espaces verts aménagés",
+    ],
+  },
+  {
+    slug: "velora-garden",
+    name: "Velora Garden",
+    location: "Bir El Djir, Oran",
+    images: ["/projets/residence2.png"],
+    description:
+      "Un projet résidentiel conçu pour offrir confort, élégance et qualité de vie.",
+    type: "F2, F3",
+    surface: "88 m²",
+    price: "À partir de 10 800 000 DA",
+    delivery: "2026",
+    caracteristiques: [
+      "Résidence fermée",
+      "Aires de jeux",
+      "Salle de sport",
+      "Parking privé",
+      "Proximité des commodités",
+    ],
+  },
+  {
+    slug: "les-terrasses-d-oran",
+    name: "Les Terrasses d’Oran",
+    location: "Canastel, Oran",
+    images: ["/projets/residence3.png"],
+    description:
+      "Des logements bénéficiant d’une vue exceptionnelle et d’une architecture contemporaine.",
+    type: "F3, F4",
+    surface: "110 m²",
+    price: "À partir de 14 200 000 DA",
+    delivery: "2028",
+    caracteristiques: [
+      "Vue panoramique",
+      "Finitions premium",
+      "Balcons spacieux",
+      "Isolation thermique",
+      "Accès sécurisé",
+    ],
+  },
+  {
+    slug: "les-zeniths-d-oran",
+    name: "Les Zéniths d’Oran",
+    location: "Es-Sénia, Oran",
+    images: ["/projets/residence4.png"],
+    description:
+      "Des logements modernes offrant un cadre de vie paisible avec des prestations haut de gamme.",
+    type: "F3, F4",
+    surface: "105 m²",
+    price: "À partir de 13 600 000 DA",
+    delivery: "2027",
+    caracteristiques: [
+      "Architecture contemporaine",
+      "Matériaux de haute qualité",
+      "Terrasses privatives",
+      "Vue dégagée",
+      "Finitions haut standing",
+    ],
+  },
+];

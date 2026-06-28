@@ -8,6 +8,47 @@
   width: 70px !important;
   transform: scale(1.15);
 }
+
+.swiper {
+  padding-bottom: 50px !important;
+}
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 20px;
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  background: #d4af37 !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #d4af37 !important;
+  opacity: 1;
+}
+.projects-swiper {
+  padding-bottom: 50px;
+}
+
+.projects-swiper .swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+}
+
+.projects-swiper .swiper-pagination-bullet {
+  background: #ffffff;
+  opacity: 0.5;
+}
+
+.projects-swiper .swiper-pagination-bullet-active {
+  background: #d4af37;
+  opacity: 1;
+}
+html {
+  scroll-behavior: smooth;
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
