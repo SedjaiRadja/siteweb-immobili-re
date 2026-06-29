@@ -328,7 +328,7 @@ export const LogoLoop = memo(
     const rootClasses = useMemo(
       () =>
         cx(
-          "relative group",
+          "relative group w-full overflow-hidden",
           isVertical
             ? "overflow-hidden h-full inline-block"
             : "overflow-x-hidden",

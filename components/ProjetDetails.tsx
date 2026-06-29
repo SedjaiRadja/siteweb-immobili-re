@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { MapPin, Home, Ruler, Calendar, Wallet } from "lucide-react";
 import { audiowide, poppins } from "./HeroSection";
-
+import Link from "next/link";
 type ProjectDetailsProps = {
   projet: {
     name: string;
@@ -102,12 +102,13 @@ const ProjectDetails = ({ projet }: ProjectDetailsProps) => {
                 ))}
               </ul>
             </div>
-
-            <button
-              className={`rounded-xl bg-gradient-to-r from-[#B08D32] to-[#D4AF37] px-8 py-4 text-white transition hover:scale-105 ${audiowide.className}`}
-            >
-              Contactez-nous
-            </button>
+            <Link href="/#contact">
+              <button
+                className={`rounded-xl bg-gradient-to-r from-[#B08D32] to-[#D4AF37] px-8 py-4 text-white transition hover:scale-105 ${audiowide.className}`}
+              >
+                Contactez-nous
+              </button>
+            </Link>
           </motion.div>
         </div>
       </section>

@@ -4,7 +4,7 @@ const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 const CountUpComponent = () => {
   return (
-    <div className=" mt-20 bg-[#2A241F] text-white py-10 grid grid-cols-2 md:flex md:flex-row justify-around gap-10 md:gap-20">
+    <div className="  bg-[#2A241F] text-white py-10 grid grid-cols-2 md:flex md:flex-row justify-around gap-10 md:gap-20">
       <div
         className={`flex flex-col items-center justify-center ${poppins.className}`}
       >

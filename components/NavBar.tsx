@@ -21,25 +21,33 @@ const Navbar = () => {
   }, []);
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
         isScrolled
           ? "bg-black/15 backdrop-blur-md border-b border-white/10"
           : "bg-transparent"
       }`}
     >
-      <div className="flex items-center justify-between px-6 lg:px-12">
+      <div className="mx-auto flex w-full items-center justify-between px-4 sm:px-6 lg:px-12">
         {/* Logo */}
-        <Link href="/">
-          <Image src={logo} alt="Logo" width={150} height={150} priority />
+        <Link href="/" className="flex-shrink-0">
+          <Image
+            src={logo}
+            alt="Logo"
+            width={150}
+            height={150}
+            priority
+            className="h-auto w-24 sm:w-28 md:w-32 lg:w-36"
+          />
         </Link>
 
         {/* Desktop Menu */}
         <div
-          className={`hidden md:text-xl lg:flex items-center gap-8 text-white font-medium ${Merriweather.className}`}
+          className={`hidden lg:flex items-center gap-8 text-xl text-white font-medium ${Merriweather.className}`}
         >
           <Link href="/" className="transition hover:text-slate-300">
-            Acceuil
+            Accueil
           </Link>
+
           <Link href="/#a-propos" className="transition hover:text-slate-300">
             À propos
           </Link>
@@ -57,14 +65,18 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Button */}
         <button
           type="button"
           onClick={() => setIsOpen((prev) => !prev)}
           className="inline-flex h-11 w-11 items-center justify-center rounded-xl
- text-[#E6D65A  ] border-[#D4AF37] drop-shadow-[0_0_4px_rgba(247,245,118,0.6)]
-  bg-white/60
-  shadow-sm transition hover:bg-[#FFFBE6] lg:hidden"
+      border border-[#D4AF37]
+      bg-white/60
+      text-[#E6D65A]
+      shadow-sm
+      transition
+      hover:bg-[#FFFBE6]
+      lg:hidden"
           aria-label="Toggle navigation menu"
           aria-expanded={isOpen}
         >
@@ -95,33 +107,32 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed ${Merriweather.className} inset-0 z-50 lg:hidden transition-all duration-300 ${
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        className={`fixed inset-0 z-50 lg:hidden transition-all duration-300 ${
+          isOpen ? "visible opacity-100" : "invisible opacity-0"
+        } ${Merriweather.className}`}
       >
-        {/* Overlay */}
         <div
           className="absolute inset-0 bg-black/70"
           onClick={() => setIsOpen(false)}
         />
 
-        {/* Menu Content */}
         <div
-          className={`relative mx-6 mt-24 rounded-3xl bg-white p-4 shadow-2xl ring-1 ring-slate-200 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          className={`relative mx-4 mt-24 rounded-3xl bg-white p-5 shadow-2xl ring-1 ring-slate-200 transition-all duration-300 ${
             isOpen ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
           }`}
         >
           <Link
             href="/"
             onClick={() => setIsOpen(false)}
-            className="block rounded-xl px-4 py-3 text-slate-900 font-medium transition hover:bg-slate-100"
+            className="block rounded-xl px-4 py-3 font-medium text-slate-900 hover:bg-slate-100"
           >
             Accueil
           </Link>
+
           <Link
             href="/#a-propos"
             onClick={() => setIsOpen(false)}
-            className="block rounded-xl px-4 py-3 text-slate-900 font-medium transition hover:bg-slate-100"
+            className="block rounded-xl px-4 py-3 font-medium text-slate-900 hover:bg-slate-100"
           >
             À propos
           </Link>
@@ -129,7 +140,7 @@ const Navbar = () => {
           <Link
             href="/#projets"
             onClick={() => setIsOpen(false)}
-            className="block rounded-xl px-4 py-3 text-slate-900 font-medium transition hover:bg-slate-100"
+            className="block rounded-xl px-4 py-3 font-medium text-slate-900 hover:bg-slate-100"
           >
             Projets
           </Link>
@@ -137,7 +148,7 @@ const Navbar = () => {
           <Link
             href="/#services"
             onClick={() => setIsOpen(false)}
-            className="block rounded-xl px-4 py-3 text-slate-900 font-medium transition hover:bg-slate-100"
+            className="block rounded-xl px-4 py-3 font-medium text-slate-900 hover:bg-slate-100"
           >
             Services
           </Link>
@@ -145,7 +156,7 @@ const Navbar = () => {
           <Link
             href="/#contact"
             onClick={() => setIsOpen(false)}
-            className="block rounded-xl px-4 py-3 text-slate-900 font-medium transition hover:bg-slate-100"
+            className="block rounded-xl px-4 py-3 font-medium text-slate-900 hover:bg-slate-100"
           >
             Contactez-nous
           </Link>
