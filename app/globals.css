@@ -12,7 +12,10 @@
 .swiper {
   padding-bottom: 50px !important;
 }
-
+html,
+body {
+  overflow-x: hidden;
+}
 .swiper-pagination {
   position: relative !important;
   margin-top: 20px;
@@ -164,11 +167,13 @@ html {
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }

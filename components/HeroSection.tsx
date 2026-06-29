@@ -1,9 +1,9 @@
 import TextType from "./TextType";
 import { ArrowRight } from "lucide-react";
-import LogoLoop from "./LogoLoop";
 import { Poppins, Audiowide } from "next/font/google";
 import Link from "next/link";
-
+import Marquee from "react-fast-marquee";
+import Image from "next/image";
 export const audiowide = Audiowide({
   subsets: ["latin"],
   weight: "400",
@@ -70,22 +70,6 @@ export default function Hero() {
             </button>
           </Link>
         </div>
-      </div>
-
-      {/* Logo Loop */}
-      <div className="relative overflow-hidden bg-[#2A241F] py-3">
-        <LogoLoop
-          logos={logosImages}
-          speed={100}
-          direction="left"
-          logoHeight={60}
-          gap={60}
-          hoverSpeed={0}
-          scaleOnHover
-          fadeOut
-          fadeOutColor="#2A241F"
-          ariaLabel="Social logos"
-        />
       </div>
     </section>
   );
