@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/NavBar";
+import { Suspense } from "react";
 import Footer from "@/components/Footer";
 import ScrollToHash from "@/components/ScrollToHash";
 const geistSans = Geist({
@@ -31,7 +32,10 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
-        <ScrollToHash />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ScrollToHash />
+        </Suspense>
+        
         {children}
         <Footer />
       </body>
