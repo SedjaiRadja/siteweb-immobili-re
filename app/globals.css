@@ -23,9 +23,7 @@
   background: #d4af37 !important;
   opacity: 0.5;
 }
-* {
-  outline: 1px solid red;
-}
+
 .swiper-pagination-bullet-active {
   background: #d4af37 !important;
   opacity: 1;
